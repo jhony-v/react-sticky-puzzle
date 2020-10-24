@@ -5,10 +5,10 @@ describe("stickyPuzzleUtils functions", () => {
     const data = [2, 4, 3];
     let index = 1;
     let sumArray = 0;
-    sumArray = sumMatrixToSelectedIndex(data, index);
+    sumArray = sumMatrixToSelectedIndex(data, index,(e)=>e);
     expect(sumArray).toEqual(2);
     index = 3;
-    sumArray = sumMatrixToSelectedIndex(data, index);
+    sumArray = sumMatrixToSelectedIndex(data, index,(e)=>e);
     expect(sumArray).toEqual(9);
   });
 

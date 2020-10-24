@@ -1,11 +1,33 @@
-import React from "react";
+import React, { memo } from "react";
 
-const Item = ({ children, itemRef, ...restProps }) => {
+const Item = (props) => {
+  const {
+    children,
+    isSticky,
+    styleSticky,
+    styleElement,
+    stylePlaceholder,
+    refItem,
+    ...restProps
+  } = props;
+
+  const selfStyleElement = {
+    ...isSticky && {
+      ...styleElement,
+      ...styleSticky
+    }
+  }
+  const classNameElement = isSticky ? "sticky__item" : "";
   return (
-    <div {...restProps} ref={itemRef}>
-      {children}
-    </div>
+    <>
+      <div {...restProps} ref={refItem} className={classNameElement} style={selfStyleElement}>
+        {children}
+      </div>
+      {isSticky && (
+        <div className="sticky__placeholder" style={stylePlaceholder} />
+      )}
+    </>
   );
 };
 
-export default Item;
+export default memo(Item);

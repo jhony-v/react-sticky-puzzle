@@ -1,7 +1,6 @@
-import "./ReactStickyPuzzle.css";
-import { default as ReactStickyPuzzle } from "./Container";
-import Item from "./Item";
+import { default as StickyPuzzleContainer } from "./Container";
+import { default as StickyPuzzleItem } from "./Item";
 
-export { Item };
+export { StickyPuzzleItem };
 
-export default ReactStickyPuzzle;
+export default StickyPuzzleContainer;

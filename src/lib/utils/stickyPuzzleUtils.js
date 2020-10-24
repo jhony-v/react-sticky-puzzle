@@ -4,8 +4,12 @@
  * @param {number} limit
  * @returns {number}
  */
-export const sumMatrixToSelectedIndex = (array, limit) => {
-  return [...array.slice(0, limit)].reduce((i, j) => i + j);
+export const sumMatrixToSelectedIndex = (array, limit,callbackSum) => {
+  let total = 0;
+  for(let i = 0 ; i < limit; i++) {
+    total += callbackSum(array[i]);
+  }
+  return total;
 };
 
 /**
