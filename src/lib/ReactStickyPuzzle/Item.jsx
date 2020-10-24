@@ -14,7 +14,9 @@ const Item = (props) => {
   const selfStyleElement = {
     ...isSticky && {
       ...styleElement,
-      ...styleSticky
+      ...styleSticky ? styleSticky : {
+        backgroundColor : "white"
+      }
     }
   }
   const classNameElement = isSticky ? "sticky__item" : "";
