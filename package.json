@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Library to place the items you want on top in a sticky sequential way.",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
