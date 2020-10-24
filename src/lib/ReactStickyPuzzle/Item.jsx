@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const Item = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+const Item = ({ children, itemRef, ...restProps }) => {
+  return (
+    <div {...restProps} ref={itemRef}>
+      {children}
+    </div>
+  );
+};
 
-export default Item
+export default Item;
