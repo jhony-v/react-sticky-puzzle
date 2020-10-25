@@ -10,7 +10,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:component": "rm -r lib lib && babel src/lib/ReactStickyPuzzle --out-dir lib --copy-files"
+    "build:component": "rm -R lib && babel src/lib/ReactStickyPuzzle --out-dir lib --copy-files"
   },
   "homepage": "https://github.com/jhony-24/react-sticky-puzzle",
   "keywords": [
