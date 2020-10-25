@@ -23,7 +23,7 @@ import ReactStickyPuzzle, { StickyPuzzleItem } from "react-sticky-puzzle";
 function App() {
   return (
     <ReactStickyPuzzle>
-      <StickyPuzzleItem styleSticke={{
+      <StickyPuzzleItem styleSticky={{
         backgroundColor: "red"
       }}>
        ...
