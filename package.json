@@ -10,7 +10,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:component": "rm -R lib && babel src/lib/ReactStickyPuzzle --out-dir lib --copy-files"
+    "build:component": "babel src/lib/ReactStickyPuzzle --out-dir lib --copy-files"
   },
   "homepage": "https://github.com/jhony-24/react-sticky-puzzle",
   "keywords": [
@@ -29,9 +29,6 @@
     "name": "Jhony Vega"
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0"
@@ -55,6 +52,9 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
     "@babel/cli": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.1",
