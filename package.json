@@ -1,14 +1,16 @@
 {
   "name": "react-sticky-puzzle",
-  "version": "1.0.0",
-  "private": true,
+  "version": "1.0.5",
+  "private": false,
   "description": "Library to place the items you want on top in a sticky sequential way.",
   "main": "lib/index.js",
+  "module": "lib/index.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:component": "rm -r lib lib && babel src/lib/ReactStickyPuzzle --out-dir lib --copy-files"
   },
   "homepage": "https://github.com/jhony-24/react-sticky-puzzle",
   "keywords": [
@@ -26,19 +28,13 @@
     "email": "jhonyvegacuya24@gmail.com",
     "name": "Jhony Vega"
   },
-  "peerDependencies": {
-    "react" : ">=16.0.0",
-    "react-dom" : ">=16.0.0"
-  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "classnames": "^2.2.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.0",
-    "web-vitals": "^0.2.4"
+    "react-scripts": "4.0.0"
   },
   "eslintConfig": {
     "extends": [
@@ -59,6 +55,10 @@
     ]
   },
   "devDependencies": {
-    "@types/jest": "^26.0.15"
+    "@babel/cli": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "@types/jest": "^26.0.15",
+    "babel-preset-minify": "^0.5.1"
   }
 }

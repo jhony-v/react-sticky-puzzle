@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer, useRef } from "react";
 import "./index.css";
 import Item from "./Item";
-import { sumMatrixToSelectedIndex, transformMapToArray } from "../utils/stickyPuzzleUtils";
+import { sumMatrixToSelectedIndex, transformMapToArray } from "./utils/stickyPuzzleUtils";
 import { actionSetStickyItem , initialState, reducer } from "./reducer";
 
 const Container = ({ children }) => {
