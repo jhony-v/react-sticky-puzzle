@@ -5,29 +5,23 @@ const Item = (props) => {
     children,
     isSticky,
     styleSticky,
-    styleElement,
-    stylePlaceholder,
     refItem,
     ...restProps
   } = props;
 
   const selfStyleElement = {
     ...isSticky && {
-      ...styleElement,
       ...styleSticky ? styleSticky : {
         backgroundColor : "white"
       }
     }
   }
-  const classNameElement = isSticky ? "sticky__item" : "";
   return (
     <>
-      <div {...restProps} ref={refItem} className={classNameElement} style={selfStyleElement}>
+      <div {...restProps} ref={refItem} style={selfStyleElement}>
         {children}
       </div>
-      {isSticky && (
-        <div className="sticky__placeholder" style={stylePlaceholder} />
-      )}
+      <div className="sticky__placeholder"></div>
     </>
   );
 };
