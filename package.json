@@ -1,6 +1,6 @@
 {
   "name": "react-sticky-puzzle",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": false,
   "description": "Library to place the items you want on top in a sticky sequential way.",
   "main": "lib/index.js",
