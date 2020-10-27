@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer, useRef } from "react";
-import "./index.css";
+import "../css/index.css";
 import Item from "./Item";
-import { sumMatrixToSelectedIndex, transformMapToArray } from "./utils/stickyPuzzleUtils";
+import { sumMatrixToSelectedIndex, transformMapToArray } from "../utils/stickyPuzzleUtils";
 import { actionSetStickyItem , initialState, reducer } from "./reducer";
 
 const Container = ({ children }) => {
@@ -11,14 +11,14 @@ const Container = ({ children }) => {
   useEffect(() => {
     const elements = transformMapToArray(refItems,({key,value}) => ({
       key,
-      value: value.getBoundingClientRect()
+      value: value.getBoundingClientRect(),
     }));
     const sizeElements = elements.length;
 
     const onScroll = () => {
         for(let i = 0; i < sizeElements; i++) {
           let { key , value } = elements[i];
-          let spaceFromTop = sumMatrixToSelectedIndex(elements,i,eItem => eItem.value.height);
+          let spaceFromTop = sumMatrixToSelectedIndex(elements,i,item => item.value.height);
           let isSticky = window.scrollY > (value.top - (elements[i - 1]?.value?.height || 0));
           action(actionSetStickyItem({
              key,
@@ -35,8 +35,7 @@ const Container = ({ children }) => {
     // eslint-disable-next-line
   },[]);
 
-  return <>
-    {React.Children.map(children, (e, i) => {
+  return React.Children.map(children, (e, i) => {
       if(e.type === Item) {
         const { spaceFromTop, isSticky, height } = state.items[i] || {}; 
         const ElementCloned = React.cloneElement(e,{
@@ -54,8 +53,7 @@ const Container = ({ children }) => {
         return ElementCloned;
       }
       return e;
-    })}
-  </>;
+  });
 };
 
 export default Container;

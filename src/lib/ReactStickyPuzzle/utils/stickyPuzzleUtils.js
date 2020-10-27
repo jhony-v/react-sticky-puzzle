@@ -5,11 +5,14 @@
  * @returns {number}
  */
 export const sumMatrixToSelectedIndex = (array, limit,callbackSum) => {
-  let total = 0;
-  for(let i = 0 ; i < limit; i++) {
-    total += callbackSum(array[i]);
+  if(callbackSum) {
+    let total = 0;
+    for(let i = 0 ; i < limit; i++) {
+      total += callbackSum(array[i]);
+    }
+    return total;
   }
-  return total;
+  return 0;
 };
 
 /**
@@ -20,10 +23,7 @@ export const sumMatrixToSelectedIndex = (array, limit,callbackSum) => {
  */
 export const transformMapToArray = (map, callbackFilter) => {
   const refArray = [...map];
-  return refArray.map(([key, value]) =>
-    callbackFilter ? callbackFilter({
-      key,
-      value,
-    }) : {key,value}
-  );
+  if(callbackFilter === undefined) return;
+  const callbackFilterValues = ([key,value]) => callbackFilter({key,value})
+  return refArray.map(callbackFilterValues);
 };

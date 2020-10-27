@@ -7,12 +7,12 @@ const App = () => {
     <div>
       <ReactStickyPuzzle>
         <Box i={1} />
-        <StickyPuzzleItem>
-          <h1> title 1</h1>
+        <StickyPuzzleItem styleSticky={{background:"lime"}}>
+          <div style={{background:"red",padding:"50px"}}> title 1</div>
         </StickyPuzzleItem>
         <Box i={20} />
-        <StickyPuzzleItem>
-          <h3> title 3</h3>
+        <StickyPuzzleItem styleSticky={{background:"orange"}}>
+          <div style={{background:"blue"}}> title 3</div>
         </StickyPuzzleItem>
         <Box i={100} />
       </ReactStickyPuzzle>
