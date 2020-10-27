@@ -4,7 +4,7 @@ import Item from "./Item";
 import { sumMatrixToSelectedIndex, transformMapToArray } from "../utils/stickyPuzzleUtils";
 import { actionSetStickyItem , initialState, reducer } from "./reducer";
 
-const Container = ({ children, onSticky }) => {  
+const Container = ({ children, onFixed }) => {  
   const [state, action] = useReducer(reducer, initialState);
   const refItems = useRef(new Map()).current;
 
@@ -38,7 +38,7 @@ const Container = ({ children, onSticky }) => {
             element.style.marginTop = spaceFromTop + "px";
             element.nextSibling.style.height = value.height + "px";
             if(elements[i].isSticky) {
-              onSticky();
+              onFixed && onFixed();
             }
           } 
           else {

@@ -5,9 +5,7 @@ import ReactStickyPuzzle, { StickyPuzzleItem } from "./lib/ReactStickyPuzzle";
 const App = () => {
   return (
     <div>
-      <ReactStickyPuzzle onSticky={() => {
-        console.log("sticky")
-      }}>
+      <ReactStickyPuzzle>
         <Box i={3} />
         <StickyPuzzleItem styleSticky={{
           background : "gray"

@@ -41,12 +41,15 @@ export default App;
 
 This component is the main one to encapsulate all the child components. Components that are inside a **StickyPuzzle** component will be affected in order to have a position in the header.
 
+| property | description | type |
+| - | - | - |
+| onFixed | Emit an event when an item is in fixed position | event |
 
 ## StickyPuzzleItem
 
 Component that will be affected by being inside the* ReactStickyPuzzle* component. These components will be positioned in the header firmly one below the other.
 You can customize the styles to your way when you are in fixed position on header.
 
-| property | description | value |
+| property | description | type |
 | - | - | - |
 | styleSticky | Set style to component when the position is sticky | style |
