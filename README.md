@@ -37,6 +37,34 @@ function App() {
 
 export default App;
 ```
+
+Adapt component to scroll container
+```javascript
+import ReactStickyPuzzle, { StickyPuzzleItem } from "react-sticky-puzzle";
+
+function App() {
+  return (
+    <div style={{
+        width:"300px",
+        height:"400px",
+        overflowY: "scroll",
+        background:"rgba(200,200,255)",
+        margin:"auto"
+      }}>
+    <ReactStickyPuzzle inElement>
+      <StickyPuzzleItem>
+       ...
+      </StickyPuzzleItem>
+      <StickyPuzzleItem>
+       ...
+      </StickyPuzzleItem>
+    </ReactStickyPuzzle>
+  );
+}
+
+export default App;
+```
+
 ## ReactStickyPuzzle
 
 This component is the main one to encapsulate all the child components. Components that are inside a **StickyPuzzle** component will be affected in order to have a position in the header.
@@ -44,6 +72,7 @@ This component is the main one to encapsulate all the child components. Componen
 | property | description | type |
 | - | - | - |
 | onFixed | Emit an event when an item is in fixed position | event |
+| inElement | Adapt container to element with scroll | boolean |
 
 ## StickyPuzzleItem
 

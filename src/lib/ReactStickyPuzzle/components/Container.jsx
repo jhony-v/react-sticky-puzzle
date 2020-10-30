@@ -4,7 +4,7 @@ import Item from "./Item";
 import { sumMatrixToSelectedIndex, transformMapToArray } from "../utils/stickyPuzzleUtils";
 import { actionSetStickyItem , initialState, reducer } from "./reducer";
 
-const Container = ({ children, onFixed, isInElement }) => {  
+const Container = ({ children, onFixed, inElement }) => {  
   const [state, action] = useReducer(reducer, initialState);
   const refItems = useRef(new Map()).current;
   const refContainerElement = useRef(null);
@@ -84,12 +84,12 @@ const Container = ({ children, onFixed, isInElement }) => {
         setActionSticky(elements[i],{ key, isSticky });
       }
     }
-    if(isInElement) {
+    if(inElement) {
       refContainerElement.current = refContainerElement.current.parentNode;
       return onScrollEvent(refContainerElement.current,onScroll);
     }
     // eslint-disable-next-line
-  },[isInElement])
+  },[inElement])
 
 
   // Scrolling in screen
@@ -121,8 +121,8 @@ const Container = ({ children, onFixed, isInElement }) => {
 
   // scrolling by default of type page
   useEffect(() => {
-    !isInElement && scrollPage();
-  },[scrollPage,isInElement]);
+    !inElement && scrollPage();
+  },[scrollPage,inElement]);
 
   return(
     <div ref={refContainerElement}>

@@ -13,7 +13,7 @@ const App = () => {
         background:"rgba(0,0,100,.1)",
         margin:"auto"
       }}>
-      <ReactStickyPuzzle isInElement>
+      <ReactStickyPuzzle inElement>
         <Box i={3} />
         <StickyPuzzleItem>
           <div> title 1</div>
