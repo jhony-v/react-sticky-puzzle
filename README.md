@@ -51,14 +51,15 @@ function App() {
         background:"rgba(200,200,255)",
         margin:"auto"
       }}>
-    <ReactStickyPuzzle inElement>
-      <StickyPuzzleItem>
-       ...
-      </StickyPuzzleItem>
-      <StickyPuzzleItem>
-       ...
-      </StickyPuzzleItem>
-    </ReactStickyPuzzle>
+      <ReactStickyPuzzle inElement>
+        <StickyPuzzleItem>
+        ...
+        </StickyPuzzleItem>
+        <StickyPuzzleItem>
+        ...
+        </StickyPuzzleItem>
+      </ReactStickyPuzzle>
+    </div>
   );
 }
 
