@@ -1,6 +1,6 @@
 {
   "name": "react-sticky-puzzle",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": false,
   "description": "Library to place the items you want on top in a sticky sequential way.",
   "main": "lib/index.js",
@@ -35,6 +35,7 @@
     "react": ">=16.0.0",
     "react-dom": ">=16.0.0"
   },
+  "license": "MIT",
   "eslintConfig": {
     "extends": [
       "react-app",
