@@ -31,7 +31,7 @@
     "name": "Jhony Vega"
   },
   "dependencies": {
-    "classnames": "^2.2.6",
+    "classnames": "^2.2.6"
   },
   "peerDependencies": {
     "react": ">=16.0.0",
