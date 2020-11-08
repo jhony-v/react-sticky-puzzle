@@ -91,6 +91,23 @@ const Container = ({ children, onFixed, inElement }) => {
     // eslint-disable-next-line
   },[inElement])
 
+  useEffect(() => {
+    if(inElement) {
+      const {  elements, lengthElements } = propsElements();
+      const sumTotalHeight = getSumTotalOfHeightElementsLimit(elements);
+      const onScroll = (e) => {
+        const { offsetTop } = refContainerElement.current;
+        for(let i = 0; i < lengthElements; i++) {
+          let { element } = elements[i];
+          let spaceFromTop = sumTotalHeight(i);
+          element.style.top = ((offsetTop - window.scrollY) + spaceFromTop) + "px";
+        }      
+      }
+      return onScrollEvent(window,onScroll);
+    }
+  // eslint-disable-next-line
+  },[inElement]);
+
 
   // Scrolling in screen
   const scrollPage = useCallback(() => {
