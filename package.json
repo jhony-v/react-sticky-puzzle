@@ -10,9 +10,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:component": "babel src/lib/ReactStickyPuzzle --out-dir lib --copy-files"
+    "build:component": "babel src/lib/ReactStickyPuzzle --out-dir lib --copy-files",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build -r https://$GH_TOKENgithub.com/jhony-24/react-sticky-puzzle"
   },
-  "homepage": "https://github.com/jhony-24/react-sticky-puzzle",
+  "homepage": "https://jhony-24.github.io/react-sticky-puzzle",
   "keywords": [
     "react",
     "react-sticky",
@@ -29,7 +31,7 @@
     "name": "Jhony Vega"
   },
   "dependencies": {
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
   },
   "peerDependencies": {
     "react": ">=16.0.0",
@@ -55,6 +57,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "@babel/cli": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.1",

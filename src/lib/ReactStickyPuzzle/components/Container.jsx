@@ -91,6 +91,8 @@ const Container = ({ children, onFixed, inElement }) => {
     // eslint-disable-next-line
   },[inElement])
 
+  
+  // effect to dispatch in scroll elements
   useEffect(() => {
     if(inElement) {
       const {  elements, lengthElements } = propsElements();

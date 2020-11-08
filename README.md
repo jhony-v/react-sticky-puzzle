@@ -2,6 +2,8 @@
 
 Library to place the items you want on top in a sticky sequential way.
 
+**[Demo](https://jhony-24.github.io/react-sticky-puzzle)**
+
 ## Installation
 
 ```console
