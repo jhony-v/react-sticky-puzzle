@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-sticky-puzzle/static/css/main.db989ee3.chunk.css",
+    "main.js": "/react-sticky-puzzle/static/js/main.781e0087.chunk.js",
+    "main.js.map": "/react-sticky-puzzle/static/js/main.781e0087.chunk.js.map",
+    "runtime-main.js": "/react-sticky-puzzle/static/js/runtime-main.2fe62d4c.js",
+    "runtime-main.js.map": "/react-sticky-puzzle/static/js/runtime-main.2fe62d4c.js.map",
+    "static/js/2.edc08a9a.chunk.js": "/react-sticky-puzzle/static/js/2.edc08a9a.chunk.js",
+    "static/js/2.edc08a9a.chunk.js.map": "/react-sticky-puzzle/static/js/2.edc08a9a.chunk.js.map",
+    "index.html": "/react-sticky-puzzle/index.html",
+    "static/css/main.db989ee3.chunk.css.map": "/react-sticky-puzzle/static/css/main.db989ee3.chunk.css.map",
+    "static/js/2.edc08a9a.chunk.js.LICENSE.txt": "/react-sticky-puzzle/static/js/2.edc08a9a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2fe62d4c.js",
+    "static/js/2.edc08a9a.chunk.js",
+    "static/css/main.db989ee3.chunk.css",
+    "static/js/main.781e0087.chunk.js"
+  ]
+}
