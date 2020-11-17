@@ -33,6 +33,7 @@ jobs:
         with:
           node-version: ${{matrix.node-version}}
       - run: |
+          yarn
           yarn install
           git config --global user.email jhonyvegacuya24@gmail.com 
           git config --global user.name jhony-24

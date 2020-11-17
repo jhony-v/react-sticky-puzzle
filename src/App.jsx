@@ -5,6 +5,7 @@ import ReactStickyPuzzle, { StickyPuzzleItem } from "./lib/ReactStickyPuzzle";
 const App = () => {
   return (
     <div>
+      <h1 className="sticky__title">STICKY DEMO</h1>
       <Box i={4} />
       <div className="container-sticky" style={{
         width:"300px",
@@ -16,22 +17,17 @@ const App = () => {
       <ReactStickyPuzzle inElement>
         <Box i={3} />
         <StickyPuzzleItem>
-          <div> title 1</div>
+          <div> STICKY 1</div>
         </StickyPuzzleItem>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, ex maiores impedit sed porro natus animi in dolorum, eaque ipsa officiis voluptatum blanditiis? Quas totam fugiat dolorem expedita vero. Illum!
         <Box i={20} />
         <StickyPuzzleItem>
-          <div> title 3</div>
+          <div> STICKY 2</div>
         </StickyPuzzleItem>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, ex maiores impedit sed porro natus animi in dolorum, eaque ipsa officiis voluptatum blanditiis? Quas totam fugiat dolorem expedita vero. Illum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, ex maiores impedit sed porro natus animi in dolorum, eaque ipsa officiis voluptatum blanditiis? Quas totam fugiat dolorem expedita vero. Illum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, ex maiores impedit sed porro natus animi in dolorum, eaque ipsa officiis voluptatum blanditiis? Quas totam fugiat dolorem expedita vero. Illum!
         <StickyPuzzleItem>
           <div style={{background:"green"}}> title 3</div>
         </StickyPuzzleItem>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, ex maiores impedit sed porro natus animi in dolorum, eaque ipsa officiis voluptatum blanditiis? Quas totam fugiat dolorem expedita vero. Illum!
         <StickyPuzzleItem>
-          <div style={{background:"lime"}}> Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim vel tempore facilis dolore molestiae adipisci, dolorem, nostrum veritatis nisi laudantium ipsam fuga, placeat asperiores officiis! Quae incidunt porro a in!</div>
+          <div style={{background:"lime"}}> STICKY 4</div>
         </StickyPuzzleItem>
         <Box i={100} />
       </ReactStickyPuzzle>
@@ -42,15 +38,16 @@ const App = () => {
         <StickyPuzzleItem styleSticky={{
           background : "gray"
         }}>
-          <div> title 1</div>
+          <div className="sticky__root"> STICK 1</div>
         </StickyPuzzleItem>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, ex maiores impedit sed porro natus animi in dolorum, eaque ipsa officiis voluptatum blanditiis? Quas totam fugiat dolorem expedita vero. Illum!
         <Box i={20} />
         <StickyPuzzleItem>
-          <div> title 3</div>
+          <div className="sticky__root"> STICKY 2</div>
         </StickyPuzzleItem>
-        <StickyPuzzleItem>
-          <div style={{background:"lime"}}> Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim vel tempore facilis dolore molestiae adipisci, dolorem, nostrum veritatis nisi laudantium ipsam fuga, placeat asperiores officiis! Quae incidunt porro a in!</div>
+        <StickyPuzzleItem styleSticky={{
+          background : "red"
+        }}>
+          <div className="sticky__root">STICKY 3</div>
         </StickyPuzzleItem>
         <Box i={100} />
       </ReactStickyPuzzle>
@@ -62,7 +59,7 @@ const App = () => {
 export const Box = ({ i }) => {
   return Array(i)
     .fill(0)
-    .map((e, i) => <h1 key={i}>{i}</h1>);
+    .map((e, i) => <h1 key={i} style={{border:"1px solid silver"}}>{i}</h1>);
 };
 
 export default App;

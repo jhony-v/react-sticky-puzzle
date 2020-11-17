@@ -1,6 +1,6 @@
 {
   "name": "react-sticky-puzzle",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "private": false,
   "description": "Library to place the items you want on top in a sticky sequential way.",
   "main": "lib/index.js",
@@ -12,7 +12,7 @@
     "eject": "react-scripts eject",
     "build:component": "babel src/lib/ReactStickyPuzzle --out-dir lib --copy-files",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build -r https://$GH_TOKENgithub.com/jhony-24/react-sticky-puzzle"
+    "deploy": "gh-pages -d build -r https://$GH_TOKEN@github.com/jhony-24/react-sticky-puzzle"
   },
   "homepage": "https://jhony-24.github.io/react-sticky-puzzle",
   "keywords": [
